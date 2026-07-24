@@ -28,3 +28,22 @@
 
 // TASK 3: Call your function below and pass the two prompt variables as arguments!
 // Your function call here...
+
+let originalFeeAmount = prompt("Please enter your fee");
+let studentTestScore = prompt("Please enter your score");
+function getscholarship(originalFeeAmount, studentTestScore){
+    originalFeeAmount = Number(originalFeeAmount);
+    studentTestScore = Number(studentTestScore);
+
+    if(studentTestScore >= 90){
+        let discountedFee = originalFeeAmount - (originalFeeAmount * 0.5);
+        alert(`After 50% discount, your new fees is: ${discountedFee}`);
+    } else if (studentTestScore >= 75){
+    let discountedFee = originalFeeAmount - (originalFeeAmount * 0.2);
+    alert(`After a 20% discount, your new fees is: ${originalFeeAmount - (originalFeeAmount *0.2)}`);
+    }else{
+        alert(`Your school fees stays the same: ${originalFeeAmount} since you score less than 75% in your test score`);
+    }
+}
+
+getscholarship(originalFeeAmount, studentTestScore);
